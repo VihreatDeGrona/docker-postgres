@@ -5,6 +5,7 @@ VOLUME /var/lib/postgresql/data
 EXPOSE 5432
 
 RUN \
+    mkdir -p /usr/share/man/man1 && \
     /usr/local/sbin/docker-upgrade && \
     apt-get install --assume-yes \
         postgresql-9.6 && \
