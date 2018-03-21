@@ -7,7 +7,7 @@ EXPOSE 5432
 RUN \
     /usr/local/sbin/docker-upgrade && \
     apt-get install --assume-yes \
-        postgresql-9.6
+        postgresql-9.6 && \
     /usr/local/sbin/docker-cleanup
 
 
