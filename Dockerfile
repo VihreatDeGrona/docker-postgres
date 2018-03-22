@@ -12,7 +12,7 @@ RUN \
         postgresql-9.6 && \
     /usr/local/sbin/docker-cleanup
 
-
+RUN echo "listen_addresses = '*'" >>/etc/postgresql/9.6/postgresql.conf
 
 COPY docker-entrypoint.sh /entrypoint.sh
 
