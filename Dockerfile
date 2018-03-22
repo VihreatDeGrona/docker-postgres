@@ -7,7 +7,7 @@ EXPOSE 5432
 RUN \
     /usr/local/sbin/docker-upgrade && \
     apt-get install --assume-yes \
-        gosu && \
+        gosu \
         postgresql-10 && \
     /usr/local/sbin/docker-cleanup
 
