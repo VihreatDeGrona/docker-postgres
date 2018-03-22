@@ -8,6 +8,7 @@ RUN \
     mkdir -p /usr/share/man/man1 /usr/share/man/man7 && \
     /usr/local/sbin/docker-upgrade && \
     apt-get install --assume-yes \
+        gosu && \
         postgresql-9.6 && \
     /usr/local/sbin/docker-cleanup
 
