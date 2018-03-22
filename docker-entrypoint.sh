@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+export PATH="${PATH}:/usr/lib/postgresql/9.6/bin"
+
 # usage: file_env VAR [DEFAULT]
 #    ie: file_env 'XYZ_DB_PASSWORD' 'example'
 # (will allow for "$XYZ_DB_PASSWORD_FILE" to fill in the value of
