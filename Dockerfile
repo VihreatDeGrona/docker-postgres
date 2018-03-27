@@ -17,4 +17,4 @@ COPY docker-entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["postgres"]
-RUN echo "Source: https://github.com/ypcs/docker-postgres\nBuild date: $(date +%Y-%m-%d\ %H:%M:%S)" >/README
+RUN echo "Source: https://github.com/ypcs/docker-postgres\nBuild date: $(date --iso-8601=ns)" >/README
