@@ -1,4 +1,4 @@
-FROM ypcs/debian:stretch
+FROM ypcs/debian:jessie
 
 ENV PGDATA /var/lib/postgresql/data
 VOLUME /var/lib/postgresql/data
@@ -8,10 +8,10 @@ RUN \
     /usr/local/sbin/docker-upgrade && \
     apt-get install --assume-yes \
         gosu \
-        postgresql-9.6 && \
+        postgresql-9.4 && \
     /usr/local/sbin/docker-cleanup
 
-RUN echo "listen_addresses = '*'" >>/etc/postgresql/9.6/main/postgresql.conf
+RUN echo "listen_addresses = '*'" >>/etc/postgresql/9.4/main/postgresql.conf
 
 COPY docker-entrypoint.sh /entrypoint.sh
 
