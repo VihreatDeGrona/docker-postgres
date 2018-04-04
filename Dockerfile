@@ -16,5 +16,7 @@ RUN echo "listen_addresses = '*'" >>/etc/postgresql/9.4/main/postgresql.conf
 
 COPY docker-entrypoint.sh /entrypoint.sh
 
+RUN echo "Source: https://github.com/ypcs/docker-postgres\nBuild date: $(date --iso-8601=ns)" >/README
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["postgres"]
