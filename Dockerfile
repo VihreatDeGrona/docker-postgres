@@ -4,6 +4,7 @@ ENV PGDATA /var/lib/postgresql/data
 VOLUME /var/lib/postgresql/data
 
 RUN \
+    echo "deb http://deb.debian.org/debian jessie-backports main" >/etc/apt/sourcse.list.d/backports.list && \
     mkdir -p /usr/share/man/man1 /usr/share/man/man7 && \
     /usr/local/sbin/docker-upgrade && \
     apt-get install --assume-yes \
